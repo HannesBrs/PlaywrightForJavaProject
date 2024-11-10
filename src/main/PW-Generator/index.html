@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password-Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="gridContainer">
+    <div id="selectPasswordParams" class="captionDivs">
+        <h1 id="selectPasswordParamsHeader"></h1>
+    </div>
+    <div id="yourPassword" class="captionDivs">
+        <h1 id="yourPasswordHeader"></h1>
+    </div>
+    <div id="passwordOptionsBlock">
+            <div id="checkboxContainer">
+                <div class="checkBoxDivs">
+                    <input type="checkbox" id="cbxLowerCaseLetters" class="checkBox" checked="checked">
+                    <label id="lblLowerCaseLetters"  class="checkBoxLabels" for="cbxLowerCaseLetters"></label>
+                </div>
+                <div class="checkBoxDivs">
+                    <input type="checkbox" id="cbxCapitalLetters" class="checkBox" checked="checked">
+                    <label id="lblCapitalLetters"  class="checkBoxLabels" for="cbxCapitalLetters"></label>
+                </div>
+                <div class="checkBoxDivs">
+                    <input type="checkbox" id="cbxNumbers" class="checkBox" checked="checked">
+                    <label id="lblNumbers"  class="checkBoxLabels" for="cbxNumbers"></label>
+                </div>
+                <div class="checkBoxDivs">
+                    <input type="checkbox" id="cbxSpecialCharacters" class="checkBox" checked="checked">
+                    <label id="lblSpecialCharacters"  class="checkBoxLabels" for="cbxSpecialCharacters"></label>
+                </div>
+                <div id="generatePasswordDiv">
+                    <div id="rangeSliderContainer">
+                        <label id="selectPasswordLengthLabel"></label>
+                        <input type="range" id="lengthSlider" min="5" max="35" value="5" oninput="updateLengthLabel()">
+                        <label id="lengthValueLabel" data-testid="lengthValueLabel"></label>
+                    </div>
+                </div>
+            </div>
+
+            <button id="generateButton" onclick="initiatePasswordGenerating()"></button>
+    </div>
+    <div id="generatedPasswordContainer">
+        <div id="generatedPasswordDiv">
+            <label id="generatedPasswordLabel"></label>
+        </div>
+        <div id="regenerateAndCopyDiv">
+            <button id="regenerateButton" class="resultButtons" onclick="initiatePasswordGenerating()"></button>
+            <button id="copyButton" class="resultButtons" onclick="copyPasswordToClipboard()"></button>
+        </div>
+    </div>
+    <div id="strongPasswordRules" class="captionDivs">
+        <h1 id="strongPasswordRulesHeader"></h1>
+    </div>
+    <div id="passwordRulesListDiv">
+        <ul id="strongPasswordRulesList">
+            <li id="rule1"></li>
+            <li id="rule2"></li>
+            <li id="rule3"></li>
+            <li id="rule4"></li>
+            <li id="rule5"></li>
+            <li id="rule6"></li>
+        </ul>
+    </div>
+    <div id="linkContainer">
+        <a id="google"  href="https://support.google.com/accounts/answer/32040?hl=en"></a><br>
+        <a id="microsoft"  href="https://support.microsoft.com/en-us/windows/create-and-use-strong-passwords-c5cebb49-8c53-4f5e-2bc4-fe357ca048eb"></a><br>
+        <a id="harvard" href="https://privsec.harvard.edu/use-strong-passwords"></a>
+    </div>
+</div>
+<select id="languageSelect" onchange="changeLanguage(this.value)">
+    <option value="en">English</option>
+    <option value="de">Deutsch</option>
+</select>
+<script src="script.js"></script>
+</body>
+</html>

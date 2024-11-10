@@ -1,0 +1,277 @@
+body {
+    background-color: #060805;
+    color: #E8EFE7;
+    font-family: Arial, serif;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+label {
+    font-size: 20px;
+}
+
+a {
+    color: #E8EFE7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    border-radius: 12px;
+    border: 2px solid #E8EFE7;
+    color: #E8EFE7;
+    font-size: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: transparent;
+}
+
+button:hover {
+    cursor: pointer;
+    color: #060805;
+    background-color: #E8EFE7;
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+button:disabled {
+    opacity: 0.7;
+}
+
+button:disabled:hover {
+    cursor: not-allowed;
+    color: #E8EFE7;
+    background-color: transparent;
+}
+
+button:disabled:active {
+    transform: none;
+}
+
+.checkBox {
+    width: 10%;
+}
+
+.checkBox:hover {
+    cursor: pointer;
+}
+
+#gridContainer {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    margin: 200px auto auto;
+    width: 60%;
+    grid-column-gap: 10%;
+    grid-row-gap: 15px;
+}
+
+.captionDivs {
+    background-color: #667C9C;
+    text-align: center;
+    border-radius: 12px;
+}
+
+#selectPasswordParams {
+    grid-row: 1;
+    grid-column: 1;
+}
+
+#yourPassword {
+    grid-row: 1;
+    grid-column: 2;
+}
+
+#passwordOptionsBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 2px solid #E8EFE7;
+    border-radius: 12px;
+    padding: 10px;
+    grid-row: 2 / 6;
+    grid-column: 1;
+}
+
+#generatedPasswordContainer {
+    border: 2px solid #E8EFE7;
+    border-radius: 12px;
+    padding: 10px;
+    grid-row: 2;
+    grid-column: 2;
+}
+
+#strongPasswordRules {
+    grid-row: 3;
+    grid-column: 2;
+}
+
+#passwordRulesListDiv {
+    border: 2px solid #E8EFE7;
+    border-radius: 12px;
+    grid-row: 4;
+    grid-column: 2;
+}
+
+#linkContainer {
+    border: 2px solid #E8EFE7;
+    border-radius: 12px;
+    padding: 10px;
+    grid-row: 5;
+    grid-column: 2;
+}
+
+.checkBoxDivs {
+    background-color: #406063;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+#txfPasswordLength {
+    border: none;
+}
+
+#generateButton {
+    width: 100%;
+    align-self: flex-end;
+}
+
+#generatedPasswordDiv {
+    background-color: #406063;
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+#regenerateAndCopyDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultButtons {
+    width: 47.25%;
+    background-color: transparent;
+    color: #E8EFE7;
+    padding: 10px;
+    border: 2px solid #E8EFE7;
+    border-radius: 12px;
+}
+
+#regenerateButton {
+    margin-right: 5%;
+}
+
+#strongPasswordRulesList {
+    font-size: 16px;
+}
+
+#lengthSlider {
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    background: #667C9C;
+    border-radius: 12px;
+    height: 8px;
+
+    width: 100%;
+    opacity: 0.7;
+}
+
+#lengthSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+
+    background-color: #E8EFE7;
+    border: 1px solid #060805;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+}
+
+#lengthSlider::-moz-range-thumb {
+    background-color: #E8EFE7;
+    border: 1px solid #060805;
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+}
+
+#lengthSlider:hover {
+    opacity: 1;
+}
+
+#lengthValueLabel {
+    font-size: 12px;
+}
+
+#selectPasswordLengthLabel {
+    font-size: 16px;
+}
+
+#rangeSliderContainer {
+    margin-top: 14px;
+}
+
+.checkBoxLabels {
+    margin-left: 12px;
+}
+
+.checkBoxLabels:hover {
+    cursor: pointer;
+}
+
+.checkBox {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkBox + .checkBoxLabels::before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-right: 16px;
+    border-color: #667C9C;
+    border-radius: 50%;
+    background-color: #060805;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.checkBox:checked + .checkBoxLabels::before {
+    background-color: #667C9C;
+    border: 2px solid #060805;
+    content: '';
+    text-align: center;
+    line-height: 14px;
+}
+
+#languageSelect{
+    position: fixed;
+    left: 15px;
+    top: 15px;
+    background-color: #406063;
+    border: 2px solid #E8EFE7;
+    border-radius: 12px;
+    padding: 5px;
+    color: #E8EFE7;
+}
+.select-items {
+    color: #E8EFE7;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #060805;
+}
